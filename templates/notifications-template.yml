@@ -43,13 +43,9 @@ properties:
       max_open_connections: (( merge || 0 ))
     uaa:
       client_id: notifications
-      client_secret: (( properties.uaa.clients.notifications.secret ))
+      client_secret: notifications_secret
       admin_client_id: (( merge ))
       admin_client_secret: (( merge ))
   domain: (( merge ))
   ssl:
     skip_cert_verify: (( merge ))
-  uaa:
-    clients:
-      notifications:
-        secret: (( merge ))

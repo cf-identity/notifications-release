@@ -2,8 +2,9 @@
 director_uuid: PLACEHOLDER-DIRECTOR-UUID
 
 properties:
+  template_only: (( merge ))
   notifications:
-    app_domain: 10.244.0.34.xip.io
+    app_domain: identity.cf-app.com
     network: default
     encryption_key: moons_of_endor
     cf:
@@ -17,14 +18,11 @@ properties:
       tls: true
     uaa:
       admin_client_id: admin
-      admin_client_secret: admin-secret
-    sender: no-reply@10.244.0.34.xip.io
+      admin_client_secret: admin_secret
+    sender: no-reply@identity.cf-app.com
+    database_url: (( merge ))
     database:
       url: (( merge ))
-  domain: 10.244.0.34.xip.io
+  domain: identity.cf-app.com
   ssl:
     skip_cert_verify: true
-  uaa:
-    clients:
-      notifications:
-        secret: notification-secret

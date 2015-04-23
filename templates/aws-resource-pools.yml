@@ -7,9 +7,8 @@ resource_pools:
   network: (( properties.notifications.network ))
   size: (( auto ))
   stemcell:
-    name: bosh-aws-xen-ubuntu
+    name: bosh-aws-xen-ubuntu-trusty-go_agent
     version: latest
   cloud_properties:
     instance_type: m1.small
     availability_zone: (( properties.template_only.aws.availability_zone ))
-
