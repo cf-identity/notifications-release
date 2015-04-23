@@ -5,7 +5,7 @@ properties:
   template_only: (( merge ))
   notifications:
     app_domain: identity.cf-app.com
-    network: default
+    network: cf1
     encryption_key: moons_of_endor
     cf:
       admin_user: admin
